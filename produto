@@ -16,86 +16,112 @@ struct produto{
 struct produto prod[50];
 int i=0;
 
+
 void incluir(){
+	
+	
 	cout<<"Digite o nome do produto: ";
-	cin>>produto.nome[i]=nome;
+	cin>>prod[i].nome;
 	
 	cout<<"Digite o codigo do produto: ";
-	cin>>produto.codigo[i]=codigo;
+	cin>>prod[i].codigo;
 	
 	cout<<"Digite o peso do produto: ";
-	cin>>produto.peso[i]=peso;
+	cin>>prod[i].peso;
 	
 	cout<<"Digite o valor do produto: ";
-	cin>>produto.valor[i]=valor;
+	cin>>prod[i].valor;
 	
 	cout<<"Digite a data de fabricação do produto: ";
-	cin>>produto.dataFab[i]=dataFab;
+	cin>>prod[i].dataFab;
 	
 	cout<<"Digite o lote do produto: ";
-	cin>>produto.lote[i]=lote;
+	cin>>prod[i].lote;
 	
 	cout<<"Digite data de validade do produto: ";
-	cin>>produto.dataVal[i]=dataVal;
+	cin>>prod[i].dataVal;
 	
 	i++;
 }
 
 void alterar(){
+	
+	
 	int aux=0;
-	cout<<"Digite o codigo do produto a ser alterado!!!!";
-	cin<<aux;
+	cout<<"Digite o codigo do produto a ser alterado: ";
+	cin>>aux;
 	
-	for (int x;)
+	for (int x;x<=i;x++){
+		if(prod[i].codigo==aux){
 	
-	cout<<"Alterar o nome do produto: ";
-	cin>>produto.nome[i]=nome;
+	cout<<"Informe o novo nome do produto: ";
+	cin>>prod[i].nome;
 	
-	cout<<"Alterar o codigo do produto: ";
-	cin>>produto.codigo[i]=codigo;
+	cout<<"Informe o novo codigo do produto: ";
+	cin>>prod[i].codigo;
 	
-	cout<<"Alterar o peso do produto: ";
-	cin>>produto.peso[i]=peso;
+	cout<<"Informe o novo peso do produto: ";
+	cin>>prod[i].peso;
 	
-	cout<<"Alterar o valor do produto: ";
-	cin>>produto.valor[i]=valor;
+	cout<<"Informe o novo valor do produto: ";
+	cin>>prod[i].valor;
 	
-	cout<<"Alterar a data de fabricação do produto: ";
-	cin>>produto.dataFab[i]=dataFab;
+	cout<<"Informe a nova data de fabricação do produto: ";
+	cin>>prod[i].dataFab;
 	
-	cout<<"Alterar o lote do produto: ";
-	cin>>produto.lote[i]=lote;
+	cout<<"Informe o novo lote do produto: ";
+	cin>>prod[i].lote;
 	
-	cout<<"Alterar data de validade do produto: ";
-	cin>>produto.dataVal[i]=dataVal;
+	cout<<"Informe a nova data de validade do produto: ";
+	cin>>prod[i].dataVal;
+	}
+}
 }
 
 void consultar(){
+	int cont=0, cod;
+	cout<<"Digite o codigo do produto a ser pesquisado: ";
+	cin>>cod;
 	
-	
-}	
-
+	while(cont<=i){
+		if(prod[i].codigo=cod){
+			
+			cout<<"Nome do produto: ";
+			cout<<"Peso do produto: ";
+			cout<<"Valor do produto: ";
+			cout<<"Data de fabricação do produto: ";
+			cout<<"Lote do produto: ";
+			cout<<"Data de fabricação do produto: ";
+			break;
+		}
+	}	
+}
 
 int main(){
-	char opcao;
+	int opcao;
 	
 	cout<<"1-INCLUIR";
+	cout<<endl;
 	cout<<"2-ALTERAR";
+	cout<<endl;
 	cout<<"3-CONSULTAR";
+	cout<<endl;
 	cout<<"4-REGISTROS DA ESTRUTURA";
+	cout<<endl;
+	cin>>opcao;
 	
 	switch (opcao){
-		case 1:
-			
-			
-
-		
+		case 1:{
+			incluir();
+			break;
+		}
+		case 2:{
+			alterar();
+			break;
+		}
+		case 3:{
+			consultar();
+			break;
+		}		
 	}
-	
-	
-	
-
-	
-
 }
-	
