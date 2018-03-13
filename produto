@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <string>
+#include <iostream>
+
+using namespace std;
+struct produto{
+	int codigo;
+	char nome[30];
+	int peso;
+	int valor;
+	int dataFab;
+	int lote;
+	int dataVal;	
+};
+
+struct produto prod[50];
+int i=0;
+
+void incluir(){
+	cout<<"Digite o nome do produto: ";
+	cin>>produto.nome[i]=nome;
+	
+	cout<<"Digite o codigo do produto: ";
+	cin>>produto.codigo[i]=codigo;
+	
+	cout<<"Digite o peso do produto: ";
+	cin>>produto.peso[i]=peso;
+	
+	cout<<"Digite o valor do produto: ";
+	cin>>produto.valor[i]=valor;
+	
+	cout<<"Digite a data de fabricação do produto: ";
+	cin>>produto.dataFab[i]=dataFab;
+	
+	cout<<"Digite o lote do produto: ";
+	cin>>produto.lote[i]=lote;
+	
+	cout<<"Digite data de validade do produto: ";
+	cin>>produto.dataVal[i]=dataVal;
+	
+	i++;
+}
+
+void alterar(){
+	int aux=0;
+	cout<<"Digite o codigo do produto a ser alterado!!!!";
+	cin<<aux;
+	
+	for (int x;)
+	
+	cout<<"Alterar o nome do produto: ";
+	cin>>produto.nome[i]=nome;
+	
+	cout<<"Alterar o codigo do produto: ";
+	cin>>produto.codigo[i]=codigo;
+	
+	cout<<"Alterar o peso do produto: ";
+	cin>>produto.peso[i]=peso;
+	
+	cout<<"Alterar o valor do produto: ";
+	cin>>produto.valor[i]=valor;
+	
+	cout<<"Alterar a data de fabricação do produto: ";
+	cin>>produto.dataFab[i]=dataFab;
+	
+	cout<<"Alterar o lote do produto: ";
+	cin>>produto.lote[i]=lote;
+	
+	cout<<"Alterar data de validade do produto: ";
+	cin>>produto.dataVal[i]=dataVal;
+}
+
+void consultar(){
+	
+	
+}	
+
+
+int main(){
+	char opcao;
+	
+	cout<<"1-INCLUIR";
+	cout<<"2-ALTERAR";
+	cout<<"3-CONSULTAR";
+	cout<<"4-REGISTROS DA ESTRUTURA";
+	
+	switch (opcao){
+		case 1:
+			
+			
+
+		
+	}
+	
+	
+	
+
+	
+
+}
+	
