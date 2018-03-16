@@ -16,32 +16,47 @@ struct produto{
 struct produto prod[5];
 int i=0;
 
+//int codigo = 1;
 
 void incluir(){
 	
+	prod[i].codigo = i+1;
+	cout<<"Codigo do produto: "<<i+1;
+	cout<<endl;
+	cout<<endl;
 	
 	cout<<"Digite o nome do produto: ";
 	cin>>prod[i].nome;
-	
-	cout<<"Digite o codigo do produto: ";
-	cin>>prod[i].codigo;
+	cout<<endl;
+	cout<<endl;
 	
 	cout<<"Digite o peso do produto: ";
 	cin>>prod[i].peso;
+	cout<<endl;
+	cout<<endl;
 	
 	cout<<"Digite o valor do produto: ";
 	cin>>prod[i].valor;
+	cout<<endl;
+	cout<<endl;
 	
 	cout<<"Digite a data de fabricação do produto: ";
 	cin>>prod[i].dataFab;
+	cout<<endl;
+	cout<<endl;
 	
 	cout<<"Digite o lote do produto: ";
 	cin>>prod[i].lote;
+	cout<<endl;
+	cout<<endl;
 	
 	cout<<"Digite data de validade do produto: ";
 	cin>>prod[i].dataVal;	
-	i++;
+	cout<<endl;
+	cout<<endl;
 	
+	i++;
+//	codigo++;
 }
 
 void alterar(){
@@ -55,38 +70,50 @@ void alterar(){
 			
 			cout<<"Nome do produto: "<<prod[cont].nome;
 			cout<<endl;
+			cout<<endl;
 			cout<<"Novo nome do produto: ";
 			cin>>prod[cont].nome;
+			cout<<endl;
 			cout<<endl;
 			
 			cout<<"Peso do produto: "<<prod[cont].peso;
 			cout<<endl;
+			cout<<endl;
 			cout<<"Novo peso do produto: ";
 			cin>>prod[cont].peso;
+			cout<<endl;
 			cout<<endl;
 			
 			cout<<"Valor do produto: "<<prod[cont].valor;
 			cout<<endl;
+			cout<<endl;
 			cout<<"Novo valor do produto: ";
 			cin>>prod[cont].valor;
+			cout<<endl;
 			cout<<endl;
 			
 			cout<<"Data de fabricação do produto: "<<prod[cont].dataFab;
 			cout<<endl;
+			cout<<endl;
 			cout<<"Nova data de fabricação do produto: ";
 			cin>>prod[cont].dataFab;
+			cout<<endl;
 			cout<<endl;
 			
 			cout<<"Lote do produto: "<<prod[cont].lote;
 			cout<<endl;
+			cout<<endl;
 			cout<<"Novo lote do produto: ";
 			cin>>prod[cont].lote;
+			cout<<endl;
 			cout<<endl;
 			
 			cout<<"Data de validade do produto: "<<prod[cont].dataVal;
 			cout<<endl;
+			cout<<endl;
 			cout<<"Nova data de validade do produto: "<<prod[cont].dataVal;
 			cin>>prod[cont].dataVal;
+			cout<<endl;
 			cout<<endl;
 		}
 		cont++;
@@ -103,15 +130,21 @@ void consultar(){
 			
 			cout<<"Nome do produto: "<<prod[cont].nome;
 			cout<<endl;
+			cout<<endl;
 			cout<<"Peso do produto: "<<prod[cont].peso;
+			cout<<endl;
 			cout<<endl;
 			cout<<"Valor do produto: "<<prod[cont].valor;
 			cout<<endl;
+			cout<<endl;
 			cout<<"Data de fabricação do produto: "<<prod[cont].dataFab;
+			cout<<endl;
 			cout<<endl;
 			cout<<"Lote do produto: "<<prod[cont].lote;
 			cout<<endl;
+			cout<<endl;
 			cout<<"Data de validade do produto: "<<prod[cont].dataVal;
+			cout<<endl;
 			cout<<endl;
 			break;
 		}
@@ -169,3 +202,4 @@ int main(){
 	}
 	
 }
+
