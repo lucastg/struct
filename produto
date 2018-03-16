@@ -13,7 +13,7 @@ struct produto{
 	int dataVal;	
 };
 
-struct produto prod[50];
+struct produto prod[5];
 int i=0;
 
 
@@ -39,43 +39,58 @@ void incluir(){
 	cin>>prod[i].lote;
 	
 	cout<<"Digite data de validade do produto: ";
-	cin>>prod[i].dataVal;
-	
+	cin>>prod[i].dataVal;	
 	i++;
+	
 }
 
 void alterar(){
 	
-	
-	int aux=0;
+	int cont=0, cod;
 	cout<<"Digite o codigo do produto a ser alterado: ";
-	cin>>aux;
+	cin>>cod;
 	
-	for (int x;x<=i;x++){
-		if(prod[i].codigo==aux){
-	
-	cout<<"Informe o novo nome do produto: ";
-	cin>>prod[i].nome;
-	
-	cout<<"Informe o novo codigo do produto: ";
-	cin>>prod[i].codigo;
-	
-	cout<<"Informe o novo peso do produto: ";
-	cin>>prod[i].peso;
-	
-	cout<<"Informe o novo valor do produto: ";
-	cin>>prod[i].valor;
-	
-	cout<<"Informe a nova data de fabricação do produto: ";
-	cin>>prod[i].dataFab;
-	
-	cout<<"Informe o novo lote do produto: ";
-	cin>>prod[i].lote;
-	
-	cout<<"Informe a nova data de validade do produto: ";
-	cin>>prod[i].dataVal;
+	while(cont<5){
+		if(prod[cont].codigo=cod){
+			
+			cout<<"Nome do produto: "<<prod[cont].nome;
+			cout<<endl;
+			cout<<"Novo nome do produto: ";
+			cin>>prod[cont].nome;
+			cout<<endl;
+			
+			cout<<"Peso do produto: "<<prod[cont].peso;
+			cout<<endl;
+			cout<<"Novo peso do produto: ";
+			cin>>prod[cont].peso;
+			cout<<endl;
+			
+			cout<<"Valor do produto: "<<prod[cont].valor;
+			cout<<endl;
+			cout<<"Novo valor do produto: ";
+			cin>>prod[cont].valor;
+			cout<<endl;
+			
+			cout<<"Data de fabricação do produto: "<<prod[cont].dataFab;
+			cout<<endl;
+			cout<<"Nova data de fabricação do produto: ";
+			cin>>prod[cont].dataFab;
+			cout<<endl;
+			
+			cout<<"Lote do produto: "<<prod[cont].lote;
+			cout<<endl;
+			cout<<"Novo lote do produto: ";
+			cin>>prod[cont].lote;
+			cout<<endl;
+			
+			cout<<"Data de validade do produto: "<<prod[cont].dataVal;
+			cout<<endl;
+			cout<<"Nova data de validade do produto: "<<prod[cont].dataVal;
+			cin>>prod[cont].dataVal;
+			cout<<endl;
+		}
+		cont++;
 	}
-}
 }
 
 void consultar(){
@@ -83,45 +98,74 @@ void consultar(){
 	cout<<"Digite o codigo do produto a ser pesquisado: ";
 	cin>>cod;
 	
-	while(cont<=i){
-		if(prod[i].codigo=cod){
+	while(cont<5){
+		if(prod[cont].codigo=cod){
 			
-			cout<<"Nome do produto: ";
-			cout<<"Peso do produto: ";
-			cout<<"Valor do produto: ";
-			cout<<"Data de fabricação do produto: ";
-			cout<<"Lote do produto: ";
-			cout<<"Data de fabricação do produto: ";
+			cout<<"Nome do produto: "<<prod[cont].nome;
+			cout<<endl;
+			cout<<"Peso do produto: "<<prod[cont].peso;
+			cout<<endl;
+			cout<<"Valor do produto: "<<prod[cont].valor;
+			cout<<endl;
+			cout<<"Data de fabricação do produto: "<<prod[cont].dataFab;
+			cout<<endl;
+			cout<<"Lote do produto: "<<prod[cont].lote;
+			cout<<endl;
+			cout<<"Data de validade do produto: "<<prod[cont].dataVal;
+			cout<<endl;
 			break;
 		}
+		cont++;
 	}	
 }
 
 int main(){
-	int opcao;
+	char opcao;
+	char continuar='s';
 	
-	cout<<"1-INCLUIR";
-	cout<<endl;
-	cout<<"2-ALTERAR";
-	cout<<endl;
-	cout<<"3-CONSULTAR";
-	cout<<endl;
-	cout<<"4-REGISTROS DA ESTRUTURA";
-	cout<<endl;
-	cin>>opcao;
-	
-	switch (opcao){
-		case 1:{
-			incluir();
-			break;
-		}
-		case 2:{
-			alterar();
-			break;
-		}
-		case 3:{
-			consultar();
-			break;
-		}		
+	while(continuar=='s'){
+		cout<< "==========================MENU==========================";
+		cout<<endl;
+		cout<<"1-INCLUIR";
+		cout<<endl;
+		cout<<endl;
+		cout<<"2-ALTERAR";
+		cout<<endl;
+		cout<<endl;
+		cout<<"3-CONSULTAR";
+		cout<<endl;
+		cout<<endl;
+		cout<<"4-REGISTROS DA ESTRUTURA";
+		cout<<endl;
+		cout<<endl;
+		cout<<"5-SAIR";
+		cout<<endl;
+		cout<<endl;
+		cin>>opcao;
+		
+		switch (opcao){
+			case '1':{
+				incluir();
+				break;
+			}
+			case '2':{
+				alterar();
+				break;
+			}
+			case '3':{
+				consultar();
+				break;
+			}
+			case '5':{
+				continuar='n';
+				break;
+			}
+			default:
+				cout<<"Opcao Invalida!";
+				cout<<endl;
+				cout<<endl;
+				break;		
+		}	
 	}
+	
 }
